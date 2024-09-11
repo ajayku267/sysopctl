@@ -1,0 +1,69 @@
+.TH SYOPCTL 8 "September 2024" "v0.1.0" "System Management"
+.SH NAME
+sysopctl \- Manage system resources and tasks
+.SH SYNOPSIS
+.B sysopctl
+[COMMAND] [OPTIONS]
+.SH DESCRIPTION
+sysopctl is a command to manage system services, processes, and system health.
+.SH COMMANDS
+.TP
+.B service list
+List all running services
+.TP
+.B service start \fI<name>\fR
+Start a service specified by \fI<name>\fR.
+.TP
+.B service stop \fI<name>\fR
+Stop a service specified by \fI<name>\fR.
+.TP
+.B system load
+View system load averages
+.TP
+.B disk usage
+Check disk usage statistics by partition
+.TP
+.B process monitor
+Monitor system processes in real-time
+.TP
+.B logs analyze
+Analyze recent critical log entries
+.TP
+.B backup \fI<path>\fR
+Backup system files from \fI<path>\fR to a predefined backup location
+.SH OPTIONS
+.TP
+.B --help
+Display this help message
+.TP
+.B --version
+Show version information
+.SH EXAMPLES
+.TP
+.B sysopctl service list
+Lists all active services
+.TP
+.B sysopctl service start apache2
+Starts the Apache2 service
+.TP
+.B sysopctl system load
+Displays the current system load averages
+.TP
+.B sysopctl disk usage
+Shows disk usage statistics
+.TP
+.B sysopctl process monitor
+Provides real-time monitoring of system processes
+.TP
+.B sysopctl logs analyze
+Analyzes critical log entries from the past hour
+.TP
+.B sysopctl backup /home/user
+Backs up files from /home/user
+.SH SEE ALSO
+.BR systemctl (1),
+.BR uptime (1),
+.BR df (1),
+.BR top (1),
+.BR journalctl (1),
+.BR rsync (1)
